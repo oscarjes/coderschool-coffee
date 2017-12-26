@@ -8,20 +8,23 @@ class Order extends Component {
     }
   
     renderOrder(key) {
-    const food = this.props.foods[key];
-    const count = this.props.order[key];
-
-    if (!food || food.status === "unavailable") {
-      return (
-        <li key={key}>{food ? food.name : "food"} is no longer available!</li>
+      const food = this.props.foods[key];
+      const count = this.props.order[key];
+      const removeButton = (
+        <span className="remove-item" onClick={() => this.props.removeFromOrder(key)}>&times;</span>
       );
-    }
-    return (
-        <li key={key}>
-            <span>{count}{food.name}</span>
-            <span>{(count * food.price)}</span>
-        </li>
-    )
+
+      if (!food || food.status === "unavailable") {
+        return (
+          <li key={key}>{food ? food.name : "food"} is no longer available!</li>
+        );
+      }
+      return (
+          <li key={key}>
+              <span><strong>{count}x {food.name}</strong></span>
+              <span> ({formatPrice(count * food.price)}) {removeButton}</span>
+          </li>
+      )
 }
 
   render() {
@@ -36,15 +39,18 @@ class Order extends Component {
       return prevTotal;
     }, 0);
     return (
-      <div>
-        <h2>Your Order</h2>
-        <ul>
-          {orderIds.map(this.renderOrder)}
-          <li>
-            <strong>Total:</strong>
-            {formatPrice(total)}
-          </li>
-        </ul>
+      <div className='order'>
+        <h3 className='title is-3'>Your Order</h3>
+        <div className='card'>
+          <div className='card-content'>
+            <ul>
+              {orderIds.map(this.renderOrder)}
+            </ul>
+          </div>
+          <footer class="card-footer">
+            <span className='subtitle is-5 card-footer-item'><strong>Your Total:</strong> {formatPrice(total)}</span>
+          </footer>
+        </div>
       </div>
     );
   }

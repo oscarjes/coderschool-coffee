@@ -26,3 +26,53 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+h3.cafe-name {
+  margin-top: 25px !important;
+  margin-bottom: 50px !important;
+}
+
+div.column {
+  padding: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0 !important;
+}
+
+div.total {
+  font-weight: 600;
+  border-bottom: 3px solid #000;
+  border-top: 3px double #000;
+}
+
+div.order {
+  max-width:600px;
+}
+
+div.payment {
+  max-width:600px;
+  margin-top:100px;
+}
+
+button.pay-button {
+  margin-top: 25px;
+}
+
+figure.media-left {
+  margin-left: 0 !important;
+}
+
+span.remove-item {
+  cursor: pointer;
+}
+
+img.logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}

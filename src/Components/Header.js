@@ -1,11 +1,9 @@
 import React from "react";
+import {Hero, Content, HeroHeader} from 'bloomer';
 
 const Header = () => {
     return (
-      <div>
-        <h1>CoderSchool Cafe</h1>
-        <h3>Menu</h3>
-      </div>
+      <span>WE</span>
     );
   }
 
