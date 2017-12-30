@@ -56,7 +56,7 @@ div.order {
 
 div.payment {
   max-width:600px;
-  margin-top:100px;
+  margin-top:50px;
 }
 
 button.pay-button {
@@ -75,4 +75,19 @@ img.logo {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+}
+
+div.main {
+  max-width: 800px;
+}
+
+div.processing-payment {
+  margin-top: 100px;
+}
+
+div.receipt {
+  margin-top: 50px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }

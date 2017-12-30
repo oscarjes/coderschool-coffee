@@ -16,9 +16,9 @@ class Food extends Component {
         <div className="media-content">
           <div className="content">
             <p>
-              <strong>{details.name}</strong>
-              <span> {formatPrice(details.price)}</span>
-              <p>{details.desc}</p>
+              <strong>{details.name}</strong><br />
+              <span> {formatPrice(details.price)}</span><br/><br/>
+              <span>{details.desc}</span>
             </p>
           </div>
         </div>
