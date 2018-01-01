@@ -56,9 +56,9 @@ class App extends Component {
 
   removeFromOrder(key) {
     const order = { ...this.state.order };
-    delete order[key];
     let amount = this.state.amount;
     amount -= order[key] * this.state.foods[key].priceUSD;
+    delete order[key];
     this.setState({ order, amount });
   }
 
