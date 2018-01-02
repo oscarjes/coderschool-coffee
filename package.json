@@ -8,6 +8,7 @@
     "bulma": "^0.6.1",
     "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^1.1.0",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -16,6 +17,8 @@
     "react-transition-group": "^2.2.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
