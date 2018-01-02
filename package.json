@@ -2,6 +2,7 @@
   "name": "coderschool-coffee",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oscarjes.github.io/coderschool-coffee",
   "dependencies": {
     "bloomer": "^0.6.3",
     "bulma": "^0.6.1",
